@@ -82,3 +82,13 @@ git commit -m "Completed Assignment-3"
 git push origin main
 ```
 Check your GitHub repository link online to confirm all modifications are safely pushed before the deadline. Good luck!
+## NOTE:
+The autograder has an automated integrity check on:
+```bash
+test_submission.py
+```
+Please do not edit, reformat, or add comments to that specific file. If you accidentally modify it locally and want to make sure your hash doesn't break, simply run
+```bash
+git checkout -- test_submission.py
+```
+ in your terminal to safely restore the original file before you commit and push your work."
