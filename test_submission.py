@@ -30,7 +30,7 @@ def run_autograder():
 
     # 3. Load the submitted weights
     try:
-        agent.policy_net.load_state_dict(torch.load(weights_path, map_location=device))
+        agent.policy_net.load_state_dict(torch.load(weights_path, map_location=device, weights_only=True))
         agent.policy_net.eval()
     except Exception as e:
         print(f"[FAIL] Could not load weights into the network: {e}")
