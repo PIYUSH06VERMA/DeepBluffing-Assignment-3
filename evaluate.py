@@ -34,7 +34,7 @@ def main():
     
     print(f"Loading weights from {WEIGHTS_PATH}...")
     try:
-        agent.policy_net.load_state_dict(torch.load(weights_path, map_location=device, weights_only=True))
+        agent.policy_net.load_state_dict(torch.load(WEIGHTS_PATH, map_location=device, weights_only=True))
         agent.policy_net.eval()  # Set network to evaluation mode (turns off dropout, batchnorm, etc.)
     except Exception as e:
         print(f"\nError loading weights: {e}")
